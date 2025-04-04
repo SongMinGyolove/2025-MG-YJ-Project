@@ -13,7 +13,7 @@ public class UserDAO {
 
     public UserDAO(SqlSession sqlSession) {
         this.sqlSession = sqlSession;
-        /*...*/
+        /*12321*/
     }
 
     public List<User> selectUserList(User user){
