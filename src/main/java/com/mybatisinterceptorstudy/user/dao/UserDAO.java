@@ -13,6 +13,7 @@ public class UserDAO {
 
     public UserDAO(SqlSession sqlSession) {
         this.sqlSession = sqlSession;
+        /*...*/
     }
 
     public List<User> selectUserList(User user){
