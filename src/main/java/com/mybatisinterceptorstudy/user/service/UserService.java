@@ -6,6 +6,4 @@ import java.util.List;
 
 public interface UserService {
     List<User> selectUserList(User user);
-
-    int insertUser(User user);
 }

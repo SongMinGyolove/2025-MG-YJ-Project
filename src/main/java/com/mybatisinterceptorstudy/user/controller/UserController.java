@@ -20,9 +20,4 @@ public class UserController {
     public List<User> selectUser(@RequestBody User user){
         return userService.selectUserList(user);
     }
-
-    @PostMapping("add")
-    public int insertUser(@RequestBody User user){
-        return userService.insertUser(user);
-    }
 }

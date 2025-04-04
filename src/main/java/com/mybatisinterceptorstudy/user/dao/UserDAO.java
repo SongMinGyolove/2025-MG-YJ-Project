@@ -16,11 +16,7 @@ public class UserDAO {
         /*12321*/
     }
 
-    public List<User> selectUserList(User user) {
+    public List<User> selectUserList(User user){
         return sqlSession.selectList("selectUserList", user);
-    }
-
-    public int insertUser(User user) {
-        return sqlSession.insert("insertUser", user);
     }
 }
