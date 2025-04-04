@@ -46,9 +46,4 @@ public class MyBatisLogInterceptor implements Interceptor {
     public void setProperties(Properties properties) {
         Interceptor.super.setProperties(properties);
     }
-
-    public String getMappedSql(MappedStatement ms, Object obj){
-
-        return "getMappedSql";
-    }
 }
