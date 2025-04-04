@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="user-mapper">
+
+    <select id="selectUserList" parameterType="com.mybatisinterceptorstudy.user.vo.User" resultType="com.mybatisinterceptorstudy.user.vo.User">
+        /* selectUserList | Younjin Kwon | 유저 정보 조회 */
+        SELECT USER_ID,
+               USER_PW
+        FROM PLATFORM_USERS
+        WHERE 1 = 1
+          AND USER_ID = #{userId}
+    </select>
+
+</mapper>

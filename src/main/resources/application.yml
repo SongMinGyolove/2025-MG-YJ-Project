@@ -1,0 +1,27 @@
+# Server
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+
+# Spring
+spring:
+  # Set Application
+  application:
+    name: mybatis-interceptor-study
+  # Set Oracle
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: SMG
+    password: admin
+    driver-class-name: oracle.jdbc.OracleDriver
+
+# Mybatis
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
