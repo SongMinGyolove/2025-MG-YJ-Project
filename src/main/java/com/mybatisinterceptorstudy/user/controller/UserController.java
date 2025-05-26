@@ -2,19 +2,19 @@ package com.mybatisinterceptorstudy.user.controller;
 
 import com.mybatisinterceptorstudy.user.service.UserService;
 import com.mybatisinterceptorstudy.user.vo.User;
+import com.mybatisinterceptorstudy.util.ResultDTO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("user")
 public class UserController {
 
     private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @PostMapping("post")
     public List<User> selectUser(@RequestBody User user){
@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping("add")
-    public int insertUser(@RequestBody User user){
-        return userService.insertUser(user);
+    public ResponseEntity<ResultDTO<Integer>> insertUser(@RequestBody User user){
+        return ResponseEntity.ok(ResultDTO.ok(userService.insertUser(user)));
     }
 }
